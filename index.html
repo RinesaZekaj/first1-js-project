@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&family=Playpen+Sans&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="menu-bar">
+        <h3>My To-Do</h3>
+        <div class="category">
+          <h4>CATEGORY</h4>
+          <ul id="list-container"></ul>
+
+          <div class="new">
+            <input
+              type="text"
+              id="category-input"
+              placeholder="Add your category"
+            />
+            <input type="color" name="color" id="cateogry-color-picker" />
+            <button class="add" onclick="addCategory()">+ Add category</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sticky-wall">
+        <h2 class="sticky-wall-title">Sticky wall</h2>
+        <div class="sticky-wall-new-note">
+          <input id="new-note-title" />
+          <textarea id="new-note-content"></textarea>
+          <select id="category-select"></select>
+          <button onclick="addTask()" class="add-note-button">Add note</button>
+        </div>
+        <ul class="sticky-wall-list" id="sticky-wall-list">
+          <li class="sticky-wall-list-item">
+            <button type="button" id="delete-note" onclick="deleteLi( )">
+              Remove
+            </button>
+            <h4 class="note-title">Social media</h4>
+            <p class="note-content">Plan social content</p>
+          </li>
+          <li class="sticky-wall-list-item">
+            <h4 class="note-title">Content strategy</h4>
+            <p class="note-content">Would need time to get insights</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
